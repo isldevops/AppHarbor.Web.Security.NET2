@@ -25,7 +25,7 @@ namespace AppHarbor.Web.Security
 		{
 			get
 			{
-				return !string.IsNullOrWhiteSpace(Name);
+				return !StringExtensions.IsNullOrWhiteSpace(Name);
 			}
 		}
 

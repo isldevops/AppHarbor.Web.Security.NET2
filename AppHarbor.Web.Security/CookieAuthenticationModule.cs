@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Web;
 
 namespace AppHarbor.Web.Security
@@ -99,11 +98,27 @@ namespace AppHarbor.Web.Security
 			var context = ((HttpApplication)sender).Context;
 			var response = context.Response;
 			var request = context.Request;
-			if (response.Cookies.Keys.Cast<string>().Contains(_configuration.CookieName))
-			{
-				response.Cache.SetCacheability(HttpCacheability.NoCache, "Set-Cookie");
-			}
-			if (response.StatusCode == 401 && !request.QueryString.AllKeys.Contains("ReturnUrl"))
+
+		    foreach (var key in response.Cookies.Keys)
+		    {
+		        if (!key.Equals(_configuration.CookieName)) 
+                    continue;
+		        
+                response.Cache.SetCacheability(HttpCacheability.NoCache, "Set-Cookie");
+		        break;
+		    }
+
+		    bool noReturnUrlInQueryString = true;
+            foreach (var key in request.QueryString.AllKeys)
+            {
+                if (!key.Equals("ReturnUrl")) 
+                    continue;
+                
+                noReturnUrlInQueryString = false;
+                break;
+            }
+
+            if (response.StatusCode == 401 && noReturnUrlInQueryString)
 			{
 				var delimiter = "?";
 				var loginUrl = _configuration.LoginUrl;

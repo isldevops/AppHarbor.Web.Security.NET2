@@ -15,7 +15,7 @@ namespace AppHarbor.Web.Security
 
 		public override void Dispose()
 		{
-			_algorithm.Dispose();
+			((IDisposable)_algorithm).Dispose();
 		}
 
 		public override byte[] ComputeSignature(byte[] data)

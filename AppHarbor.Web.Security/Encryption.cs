@@ -24,12 +24,12 @@ namespace AppHarbor.Web.Security
 
 		public static Encryption Create(string secretKey)
 		{
-			return Create(SymmetricAlgorithm.Create(), secretKey.GetByteArrayFromHexString());
+            return Create(SymmetricAlgorithm.Create(), StringExtensions.GetByteArrayFromHexString(secretKey));
 		}
 
 		public static Encryption Create(string algorithm, string secretKey)
 		{
-			return Create(SymmetricAlgorithm.Create(algorithm), secretKey.GetByteArrayFromHexString());
+            return Create(SymmetricAlgorithm.Create(algorithm), StringExtensions.GetByteArrayFromHexString(secretKey));
 		}
 
 		public static Encryption Create<T>(byte[] secretKey) where T : SymmetricAlgorithm, new()
@@ -39,7 +39,7 @@ namespace AppHarbor.Web.Security
 
 		public static Encryption Create<T>(string secretKey) where T: SymmetricAlgorithm, new()
 		{
-			return Create<T>(secretKey.GetByteArrayFromHexString());
+            return Create<T>(StringExtensions.GetByteArrayFromHexString(secretKey));
 		}
 	}
 }

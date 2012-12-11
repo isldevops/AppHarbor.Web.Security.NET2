@@ -6,14 +6,14 @@ namespace AppHarbor.Web.Security
 	public sealed class CookieAuthenticator : IAuthenticator
 	{
 		private readonly ICookieAuthenticationConfiguration _configuration;
-		private readonly HttpContextBase _context;
+		private readonly HttpContext _context;
 		
 		public CookieAuthenticator()
-			: this(new ConfigFileAuthenticationConfiguration(), new HttpContextWrapper(HttpContext.Current))
+			: this(new ConfigFileAuthenticationConfiguration(), HttpContext.Current)
 		{
 		}
 
-		public CookieAuthenticator(ICookieAuthenticationConfiguration configuration, HttpContextBase context)
+		public CookieAuthenticator(ICookieAuthenticationConfiguration configuration, HttpContext context)
 		{
 			_configuration = configuration;
 			_context = context;

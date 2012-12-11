@@ -1,0 +1,4 @@
+<Modules>
+  <Module PersistentId="BA59E36D-677F-4F70-94DF-C75C8860F67B" ModuleId="AppHarbor.Web.Security" />
+  <Module PersistentId="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D" ModuleId="AuthenticationExample.Web" />
+</Modules>

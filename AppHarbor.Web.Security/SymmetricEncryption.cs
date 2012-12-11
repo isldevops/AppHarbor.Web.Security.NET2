@@ -17,7 +17,7 @@ namespace AppHarbor.Web.Security
 
 		public override void Dispose()
 		{
-			_algorithm.Dispose();
+			((IDisposable)_algorithm).Dispose();
 		}
 
 		public override byte[] Encrypt(byte[] valueBytes, byte[] initializationVector = null)
@@ -26,10 +26,17 @@ namespace AppHarbor.Web.Security
 			if (generateRandomIV)
 			{
 				initializationVector = new byte[_algorithm.BlockSize / 8];
-				using (var rng = RandomNumberGenerator.Create())
-				{
-					rng.GetBytes(initializationVector);
-				}
+			    var rng = RandomNumberGenerator.Create();
+			    try
+			    {
+                    rng.GetBytes(initializationVector);
+			    }
+			    finally 
+			    {
+                    if(rng != null)
+                        ((IDisposable)rng).Dispose();
+			    }
+                
 			}
 			using (var output = new MemoryStream())
 			{

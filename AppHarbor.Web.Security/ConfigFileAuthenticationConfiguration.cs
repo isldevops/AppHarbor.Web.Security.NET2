@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Configuration;
+using System.Web;
 using System.Web.Security;
+using System.Web.Configuration;
 
 namespace AppHarbor.Web.Security
 {
 	public sealed class ConfigFileAuthenticationConfiguration : ICookieAuthenticationConfiguration
 	{
+	    private FormsAuthenticationConfiguration _timeout;
+
 		public string CookieName
 		{
 			get
@@ -53,7 +57,8 @@ namespace AppHarbor.Web.Security
 		{
 			get
 			{
-				return GetRequiredSetting("cookieauthentication.encryptionkey").GetByteArrayFromHexString();
+			    return StringExtensions.GetByteArrayFromHexString(GetRequiredSetting("cookieauthentication.encryptionkey"));
+				
 			}
 		}
 
@@ -69,7 +74,7 @@ namespace AppHarbor.Web.Security
 		{
 			get
 			{
-				return GetRequiredSetting("cookieauthentication.validationkey").GetByteArrayFromHexString();
+                return StringExtensions.GetByteArrayFromHexString(GetRequiredSetting("cookieauthentication.validationkey"));
 			}
 		}
 
@@ -77,7 +82,9 @@ namespace AppHarbor.Web.Security
 		{
 			get
 			{
-				return FormsAuthentication.Timeout;
+                var authenticationSection = (AuthenticationSection)ConfigurationManager.GetSection("authentication");
+                return authenticationSection.Forms.Timeout;
+
 			}
 		}
 
