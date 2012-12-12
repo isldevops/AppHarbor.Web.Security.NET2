@@ -17,6 +17,7 @@ namespace AppHarbor.Web.Security
 
 		public override void Dispose()
 		{
+		    _algorithm.Clear();
 			((IDisposable)_algorithm).Dispose();
 		}
 
@@ -33,8 +34,10 @@ namespace AppHarbor.Web.Security
 			    }
 			    finally 
 			    {
-                    if(rng != null)
+                    if (rng != null)
+                    {
                         ((IDisposable)rng).Dispose();
+                    }
 			    }
                 
 			}
