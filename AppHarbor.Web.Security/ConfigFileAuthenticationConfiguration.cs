@@ -82,7 +82,7 @@ namespace AppHarbor.Web.Security
 		{
 			get
 			{
-                var authenticationSection = (AuthenticationSection)ConfigurationManager.GetSection("authentication");
+                var authenticationSection = (AuthenticationSection)ConfigurationManager.GetSection("system.web\authentication");
                 return authenticationSection.Forms.Timeout;
 
 			}

@@ -1,0 +1,27 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="BA59E36D-677F-4F70-94DF-C75C8860F67B/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
+      <File id="D2BCFD43-3FDD-4B23-B7CC-DBDBCAA33437/f:NuGet.targets/l:C!?Development?GitHub?AppHarbor.Web.Security?.nuget?NuGet.targets" caret="1460" fromTop="26" />
+      <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/f:packages.config" caret="50" fromTop="1" />
+    </RecentFiles>
+    <RecentEdits />
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False" />
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
