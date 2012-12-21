@@ -10,9 +10,14 @@ namespace AuthenticationExample.Web.Controllers
 {
 	public class SessionController : Controller
 	{
-		private readonly IAuthenticator _authenticator;
-		private readonly IRepository _repository;
+		private IAuthenticator _authenticator;
+		private IRepository _repository;
 		private const string errorMessage = "Invalid username or password";
+
+	    public SessionController()
+	    {
+	        
+	    }
 
 		public SessionController(IAuthenticator authenticator, IRepository repository)
 		{
@@ -30,6 +35,8 @@ namespace AuthenticationExample.Web.Controllers
 		public ActionResult Create(SessionViewModel sessionViewModel)
 		{
 			User user = null;
+            _repository = new InMemoryRepository();
+            _authenticator = new CookieAuthenticator();
 			if (ModelState.IsValid)
 			{
 				user = _repository.GetAll<User>().SingleOrDefault(x => x.Username == sessionViewModel.Username);

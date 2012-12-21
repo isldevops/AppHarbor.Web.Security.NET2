@@ -53,6 +53,7 @@ namespace AppHarbor.Web.Security
 			{
 				context.SkipAuthorization = true;
 			}
+
 		}
 
 		private void RenewCookieIfExpiring(HttpContext context, CookieProtector protector, AuthenticationCookie authenticationCookie)
@@ -132,7 +133,7 @@ namespace AppHarbor.Web.Security
 
 		public void Init(HttpApplication context)
 		{
-			context.AuthenticateRequest += OnAuthenticateRequest;
+			context.BeginRequest += OnAuthenticateRequest;
 			context.EndRequest += OnEndRequest;
 		}
 

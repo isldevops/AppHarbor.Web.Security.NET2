@@ -95,5 +95,6 @@ namespace AppHarbor.Web.Security
 				return FormsAuthentication.RequireSSL;
 			}
 		}
+
 	}
 }

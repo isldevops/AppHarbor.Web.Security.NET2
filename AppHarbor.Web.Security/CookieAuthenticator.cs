@@ -27,7 +27,7 @@ namespace AppHarbor.Web.Security
 				var httpCookie = new HttpCookie(_configuration.CookieName, protector.Protect(cookie.Serialize()))
 				{
 					HttpOnly = true,
-					Secure = _configuration.RequireSSL,
+					Secure = _configuration.RequireSSL
 				};
 				if (!persistent)
 				{
@@ -46,5 +46,7 @@ namespace AppHarbor.Web.Security
 				Expires = DateTime.UtcNow.AddMonths(-100),
 			});
 		}
+
+
 	}
 }

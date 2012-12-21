@@ -11,8 +11,13 @@ namespace AuthenticationExample.Web.Controllers
 {
 	public class UserController : Controller
 	{
-		private readonly IAuthenticator _authenticator;
-		private readonly IRepository _repository;
+		private IAuthenticator _authenticator;
+        private IRepository _repository;
+
+	    public UserController()
+	    {
+	        
+	    }
 
 		public UserController(IAuthenticator authenticator, IRepository repository)
 		{
@@ -29,6 +34,9 @@ namespace AuthenticationExample.Web.Controllers
 		[HttpPost]
 		public ActionResult Create(UserInputModel userInputModel)
 		{
+            _repository = new InMemoryRepository();
+            _authenticator = new CookieAuthenticator();
+
 			if (_repository.GetAll<User>().Any(x => x.Username == userInputModel.Username))
 			{
 				ModelState.AddModelError("Username", "Username is already in use");
