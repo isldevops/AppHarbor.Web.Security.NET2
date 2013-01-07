@@ -18,8 +18,13 @@ namespace AppHarbor.Web.Security
 			_configuration = configuration;
 			_context = context;
 		}
+
+        public void SetCookie(string username)
+        {
+            SetCookie(username,false,null, null);
+        }
 		
-		public void SetCookie(string username, bool persistent = false, string[] roles = null, byte[] tag = null)
+		public void SetCookie(string username, bool persistent , string[] roles, byte[] tag)
 		{
 			var cookie = new AuthenticationCookie(0, Guid.NewGuid(), persistent, username, roles, tag);
 			using (var protector = new CookieProtector(_configuration))

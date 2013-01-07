@@ -21,7 +21,12 @@ namespace AppHarbor.Web.Security
 			((IDisposable)_algorithm).Dispose();
 		}
 
-		public override byte[] Encrypt(byte[] valueBytes, byte[] initializationVector = null)
+        public override byte[] Encrypt(byte[] valueBytes)
+        {
+            return Encrypt(valueBytes, null);
+        }
+
+		public override byte[] Encrypt(byte[] valueBytes, byte[] initializationVector)
 		{
 			bool generateRandomIV = initializationVector == null;
 			if (generateRandomIV)
@@ -56,7 +61,12 @@ namespace AppHarbor.Web.Security
 			}
 		}
 
-		public override byte[] Decrypt(byte[] encryptedValue, byte[] initializationVector = null)
+        public override byte[] Decrypt(byte[] encryptedValue)
+        {
+            return Decrypt(encryptedValue, null);
+        }
+
+		public override byte[] Decrypt(byte[] encryptedValue, byte[] initializationVector)
 		{
 			int dataOffset = 0;
 			if (initializationVector == null)

@@ -9,8 +9,11 @@ namespace AppHarbor.Web.Security
 		{
 		}
 
-		public abstract byte[] Encrypt(byte[] valueBytes, byte[] initializationVector = null);
-		public abstract byte[] Decrypt(byte[] encryptedValue, byte[] initializationVector = null);
+        public abstract byte[] Encrypt(byte[] valueBytes);
+        public abstract byte[] Decrypt(byte[] encryptedValue);
+
+		public abstract byte[] Encrypt(byte[] valueBytes, byte[] initializationVector);
+		public abstract byte[] Decrypt(byte[] encryptedValue, byte[] initializationVector);
 
 		public static Encryption Create(SymmetricAlgorithm algorithm, byte[] secretKey)
 		{

@@ -44,7 +44,18 @@ namespace AppHarbor.Web.Security
 			}
 		}
 
-		public AuthenticationCookie(short cookieType, Guid id, bool persistent, string name, string[] roles = null, byte[] tag = null)
+        public AuthenticationCookie(short cookieType, Guid id, bool persistent, string name)
+        {
+            _cookieType = cookieType;
+            _id = id;
+            _persistent = persistent;
+            _name = name;
+            _roles = new string[0];
+            _tag = null;
+            _issueDate = DateTime.UtcNow;
+        }
+
+		public AuthenticationCookie(short cookieType, Guid id, bool persistent, string name, string[] roles, byte[] tag)
 		{
 			_cookieType = cookieType;
 			_id = id;

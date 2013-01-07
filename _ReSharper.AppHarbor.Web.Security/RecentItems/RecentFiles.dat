@@ -1,15 +1,40 @@
 ﻿<RecentFiles>
   <RecentFiles>
     <File id="BA59E36D-677F-4F70-94DF-C75C8860F67B/d:Properties/f:AssemblyInfo.cs" caret="0" fromTop="0" />
-    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/f:packages.config" caret="50" fromTop="1" />
     <File id="BA59E36D-677F-4F70-94DF-C75C8860F67B/f:ICookieAuthenticationConfiguration.cs" caret="0" fromTop="0" />
-    <File id="BA59E36D-677F-4F70-94DF-C75C8860F67B/f:CookieAuthenticator.cs" caret="0" fromTop="0" />
-    <File id="BA59E36D-677F-4F70-94DF-C75C8860F67B/f:CookieAuthenticationModule.cs" caret="0" fromTop="0" />
-    <File id="BA59E36D-677F-4F70-94DF-C75C8860F67B/f:ConfigFileAuthenticationConfiguration.cs" caret="1835" fromTop="52" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/f:packages.config" caret="190" fromTop="4" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/f:Global.asax.cs" caret="0" fromTop="0" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:PersistenceSupport/f:IRepository.cs" caret="0" fromTop="0" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:PersistenceSupport/f:InMemoryRepository.cs" caret="1225" fromTop="49" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:Mvc/f:StructureMapControllerFactory.cs" caret="600" fromTop="23" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:Views/d:Home/f:Index.cshtml" caret="0" fromTop="0" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:Model/f:User.cs" caret="0" fromTop="0" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:Model/f:Entity.cs" caret="0" fromTop="0" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:ViewModels/f:UserInputModel.cs" caret="0" fromTop="0" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:ViewModels/f:SessionViewModel.cs" caret="0" fromTop="0" />
+    <File id="BA59E36D-677F-4F70-94DF-C75C8860F67B/f:AuthenticationCookie.cs" caret="820" fromTop="8" />
+    <File id="BA59E36D-677F-4F70-94DF-C75C8860F67B/f:ConfigFileAuthenticationConfiguration.cs" caret="1321" fromTop="30" />
+    <File id="BA59E36D-677F-4F70-94DF-C75C8860F67B/f:CookieAuthenticationModule.cs" caret="546" fromTop="12" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:Controllers/f:SessionController.cs" caret="1937" fromTop="25" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:Controllers/f:UserController.cs" caret="1088" fromTop="26" />
+    <File id="BA59E36D-677F-4F70-94DF-C75C8860F67B/f:CookieAuthenticator.cs" caret="666" fromTop="23" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/f:Web.config" caret="770" fromTop="13" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:Controllers/f:HomeController.cs" caret="191" fromTop="12" />
   </RecentFiles>
   <RecentEdits>
     <File id="BA59E36D-677F-4F70-94DF-C75C8860F67B/f:ConfigFileAuthenticationConfiguration.cs" caret="1637" fromTop="36" />
     <File id="BA59E36D-677F-4F70-94DF-C75C8860F67B/f:ConfigFileAuthenticationConfiguration.cs" caret="1638" fromTop="39" />
-    <File id="BA59E36D-677F-4F70-94DF-C75C8860F67B/f:ConfigFileAuthenticationConfiguration.cs" caret="1835" fromTop="52" />
+    <File id="BA59E36D-677F-4F70-94DF-C75C8860F67B/f:ConfigFileAuthenticationConfiguration.cs" caret="1837" fromTop="52" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:Controllers/f:SessionController.cs" caret="532" fromTop="18" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:Controllers/f:UserController.cs" caret="480" fromTop="18" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:Controllers/f:UserController.cs" caret="357" fromTop="13" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:Controllers/f:UserController.cs" caret="908" fromTop="37" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:Controllers/f:SessionController.cs" caret="383" fromTop="10" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:Controllers/f:HomeController.cs" caret="191" fromTop="12" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:Controllers/f:SessionController.cs" caret="1053" fromTop="38" />
+    <File id="BA59E36D-677F-4F70-94DF-C75C8860F67B/f:CookieAuthenticationModule.cs" caret="529" fromTop="21" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/f:Web.config" caret="1533" fromTop="16" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/f:Web.config" caret="770" fromTop="13" />
+    <File id="FD393AA1-CC82-4B76-9AAB-C968F4A39C6D/d:Controllers/f:UserController.cs" caret="1783" fromTop="37" />
   </RecentEdits>
 </RecentFiles>
