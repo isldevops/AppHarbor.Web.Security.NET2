@@ -32,7 +32,8 @@ namespace AppHarbor.Web.Security
 				var httpCookie = new HttpCookie(_configuration.CookieName, protector.Protect(cookie.Serialize()))
 				{
 					HttpOnly = true,
-					Secure = _configuration.RequireSSL
+					Secure = _configuration.RequireSSL,
+                    Domain = _configuration.Domain
 				};
 				if (!persistent)
 				{

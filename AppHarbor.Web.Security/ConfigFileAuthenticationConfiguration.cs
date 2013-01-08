@@ -88,6 +88,15 @@ namespace AppHarbor.Web.Security
 			}
 		}
 
+	    public string Domain
+	    {
+	        get
+	        {
+                var authenticationSection = (AuthenticationSection)ConfigurationManager.GetSection("system.web/authentication");
+	            return authenticationSection.Forms.Domain;
+	        }
+	    }
+
 		public bool RequireSSL
 		{
 			get
