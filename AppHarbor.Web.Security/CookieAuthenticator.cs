@@ -50,6 +50,7 @@ namespace AppHarbor.Web.Security
 			_context.Response.Cookies.Add(new HttpCookie(_configuration.CookieName, "")
 			{
 				Expires = DateTime.UtcNow.AddMonths(-100),
+                		Domain = _configuration.Domain
 			});
 		}
 
