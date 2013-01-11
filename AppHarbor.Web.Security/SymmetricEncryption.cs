@@ -33,17 +33,7 @@ namespace AppHarbor.Web.Security
 			{
 				initializationVector = new byte[_algorithm.BlockSize / 8];
 			    var rng = RandomNumberGenerator.Create();
-			    try
-			    {
-                    rng.GetBytes(initializationVector);
-			    }
-			    finally 
-			    {
-                    if (rng != null)
-                    {
-                        ((IDisposable)rng).Dispose();
-                    }
-			    }
+            		rng.GetBytes(initializationVector);
                 
 			}
 			using (var output = new MemoryStream())
